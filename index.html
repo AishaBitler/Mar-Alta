@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <title>
+   Mar&eacute; Alta &mdash; Moda praia
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&amp;family=Fredoka:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root {
+    --bg:#fff;
+    --ink:#000;
+    --muted:#6B6B6B;
+    --line:#EAEAEA;
+    --chip:#EDEDED;
+    --yellow:#FFF200;
+    --foot:#F4F4F4;
+    --sans:"Roboto","Helvetica Neue",Arial,sans-serif;
+    --logo:"Bodoni Moda","Didot",Georgia,serif;
+    --round:"Fredoka","Arial Rounded MT Bold",Arial,sans-serif;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    color-scheme:light;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg:#111;
+        --ink:#fff;
+        --muted:#A5A5A5;
+        --line:#2C2C2C;
+        --chip:#2A2A2A;
+        --foot:#1A1A1A;
+        color-scheme:dark
+    }
+}
+:root[data-theme="dark"] {
+    --bg:#111;
+    --ink:#fff;
+    --muted:#A5A5A5;
+    --line:#2C2C2C;
+    --chip:#2A2A2A;
+    --foot:#1A1A1A;
+    color-scheme:dark
+}
+html {
+    scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);
+    scroll-behavior:smooth
+}
+* {
+    box-sizing:border-box
+}
+body {
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.4
+}
+a {
+    color:inherit;
+    text-decoration:none
+}
+button {
+    font:inherit;
+    color:inherit;
+    cursor:pointer
+}
+:focus-visible {
+    outline:2px solid var(--ink);
+    outline-offset:3px
+}
+.pad {
+    padding-left:clamp(16px,3.2vw,48px);
+    padding-right:clamp(16px,3.2vw,48px)
+}
+header {
+    position:sticky;
+    top:env(safe-area-inset-top,0px);
+    z-index:20;
+    background:var(--bg);
+    border-bottom:1px solid var(--line)
+}
+.hd {
+    display:flex;
+    align-items:center;
+    gap:26px;
+    padding-top:14px;
+    padding-bottom:14px;
+    flex-wrap:wrap
+}
+.logo {
+    font-family:var(--logo);
+    font-weight:700;
+    font-size:2rem;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    line-height:1
+}
+.pill {
+    background:var(--yellow);
+    color:#000;
+    padding:5px 14px;
+    border-radius:999px;
+    font-size:1rem;
+    text-transform:uppercase
+}
+nav.main {
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap
+}
+nav.main a {
+    text-transform:uppercase
+}
+nav.main a:hover {
+    text-decoration:underline;
+    text-underline-offset:6px
+}
+.sp {
+    flex:1
+}
+.search {
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid var(--ink);
+    width:240px
+}
+.search input {
+    flex:1;
+    border:0;
+    background:none;
+    color:var(--ink);
+    font:inherit;
+    padding:8px 0;
+    min-width:0;
+    outline-offset:6px
+}
+.search button,.ic {
+    background:none;
+    border:0;
+    padding:4px;
+    display:flex;
+    position:relative
+}
+svg.i {
+    width:26px;
+    height:26px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round
+}
+.badge {
+    position:absolute;
+    top:-4px;
+    right:-6px;
+    background:#000;
+    color:#fff;
+    font-size:.7rem;
+    min-width:18px;
+    height:18px;
+    border-radius:9px;
+    display:grid;
+    place-items:center
+}
+.icons {
+    display:flex;
+    gap:18px;
+    align-items:center
+}
+.feature {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    padding-top:4px;
+    align-items:start
+}
+.ban {
+    position:relative;
+    aspect-ratio:1/1.12;
+    overflow:hidden
+}
+.ban .ov {
+    position:absolute;
+    left:14px;
+    bottom:20%;
+    display:flex;
+    flex-direction:column;
+    color:#fff
+}
+.ban small {
+    font-size:clamp(1rem,2vw,1.6rem);
+    font-weight:300;
+    letter-spacing:.04em;
+    text-transform:uppercase
+}
+.ban strong {
+    font-family:var(--round);
+    font-weight:600;
+    font-size:clamp(2.6rem,5.6vw,4.6rem);
+    line-height:1;
+    text-transform:uppercase
+}
+.ban a {
+    background:#fff;
+    color:#000;
+    text-align:center;
+    font-size:.95rem;
+    text-transform:uppercase;
+    padding:2px 10px;
+    margin-top:4px
+}
+.sec-h {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:16px;
+    margin:12px 0 28px
+}
+.sec-h h2 {
+    font-size:clamp(2rem,3.4vw,2.7rem);
+    font-weight:400;
+    margin:0;
+    line-height:1.15
+}
+.sec-h p {
+    margin:2px 0 0
+}
+.arrows {
+    display:flex;
+    gap:28px
+}
+.arrows button {
+    background:none;
+    border:0;
+    padding:4px
+}
+.track {
+    display:grid;
+    grid-auto-flow:column;
+    gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none
+}
+.track::-webkit-scrollbar {
+    display:none
+}
+.t2 {
+    grid-auto-columns:calc((100% - 24px)/2)
+}
+.t4 {
+    grid-auto-columns:calc((100% - 72px)/4)
+}
+.card {
+    scroll-snap-align:start;
+    min-width:0
+}
+.ph {
+    aspect-ratio:7/10;
+    position:relative;
+    overflow:hidden
+}
+.art {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%
+}
+.tag {
+    position:absolute;
+    left:10px;
+    top:10px;
+    background:#000;
+    color:#fff;
+    font-size:.75rem;
+    padding:2px 10px;
+    text-transform:uppercase
+}
+.r1 {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:10px 0 6px;
+    min-height:28px
+}
+.sws {
+    display:flex;
+    gap:8px
+}
+.sw {
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    padding:0
+}
+.sw[aria-pressed="true"] {
+    outline:2px solid var(--ink);
+    outline-offset:2px
+}
+.fav svg {
+    width:24px;
+    height:24px;
+    stroke-width:1.4
+}
+.fav[aria-pressed="true"] svg {
+    fill:currentColor
+}
+.nm {
+    font-size:.82rem;
+    text-transform:uppercase;
+    margin:0
+}
+.cd {
+    font-size:.75rem;
+    color:var(--muted);
+    margin:2px 0 8px
+}
+.pr {
+    font-weight:700;
+    font-size:1.05rem;
+    margin:0
+}
+.pc {
+    color:var(--muted);
+    margin:0 0 10px
+}
+.szs {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap
+}
+.sz {
+    width:40px;
+    height:40px;
+    background:var(--chip);
+    border:0;
+    font-size:.95rem
+}
+.sz[aria-pressed="true"] {
+    background:#000;
+    color:#fff
+}
+.sz:disabled {
+    color:#BBB;
+    text-decoration:line-through;
+    cursor:not-allowed;
+    background:transparent;
+    border:1px solid var(--line)
+}
+.add {
+    width:100%;
+    margin-top:12px;
+    background:#000;
+    color:#fff;
+    border:0;
+    padding:12px;
+    text-transform:uppercase;
+    font-size:.85rem;
+    letter-spacing:.04em
+}
+.add:hover {
+    opacity:.85
+}
+:root[data-theme="dark"] .add,:root[data-theme="dark"] .sz[aria-pressed="true"] {
+    background:#fff;
+    color:#000
+}
+.blk {
+    margin-top:clamp(40px,5vw,72px)
+}
+.tiles {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px
+}
+.tile {
+    position:relative;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:20px
+}
+.tile h3 {
+    font-family:var(--round);
+    font-weight:600;
+    font-size:clamp(1.5rem,2.4vw,2.2rem);
+    margin:0;
+    text-transform:uppercase;
+    position:relative
+}
+.tile span {
+    position:relative;
+    text-transform:uppercase;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    font-size:.9rem
+}
+.empty {
+    color:var(--muted);
+    padding:24px 0
+}
+footer {
+    margin-top:clamp(48px,6vw,88px);
+    background:black;
+    padding-top:44px;
+    padding-bottom:28px
+}
+.cols {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px
+}
+footer h4 {
+    margin:0 0 12px;
+    text-transform:uppercase;
+    font-size:.9rem;
+    letter-spacing:.06em
+}
+footer ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:6px;
+    font-size:.92rem;
+    color:var(--muted)
+}
+footer a:hover {
+    color:var(--ink)
+}
+.pay {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap
+}
+.pay span {
+    border:1px solid var(--line);
+    background:var(--bg);
+    padding:3px 12px;
+    font-size:.8rem
+}
+.copy {
+    border-top:1px solid var(--line);
+    margin-top:30px;
+    padding-top:16px;
+    font-size:.8rem;
+    color:var(--muted)
+}
+.fixed {
+    position:fixed;
+    right:16px;
+    bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-end;
+    z-index:15
+}
+.up {
+    background:#000;
+    color:#fff;
+    border:0;
+    padding:8px 14px;
+    font-size:.7rem;
+    font-weight:700;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-transform:uppercase
+}
+.up svg {
+    width:20px;
+    height:20px;
+    stroke-width:3
+}
+.wa {
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:#25D366;
+    display:grid;
+    place-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.25)
+}
+.wa svg {
+    width:30px;
+    height:30px;
+    fill:#fff
+}
+.drawer {
+    position:fixed;
+    top:0;
+    right:0;
+    height:100%;
+    width:min(400px,100%);
+    background:var(--bg);
+    color:var(--ink);
+    z-index:40;
+    transform:translateX(100%);
+    transition:transform .3s;
+    padding:calc(20px + env(safe-area-inset-top,0px)) 24px calc(20px + env(safe-area-inset-bottom,0px));
+    display:flex;
+    flex-direction:column;
+    border-left:1px solid var(--line)
+}
+.drawer.open {
+    transform:none
+}
+.drawer h2 {
+    font-weight:400;
+    font-size:1.8rem;
+    margin:0 0 12px
+}
+.close {
+    align-self:flex-end;
+    background:none;
+    border:0;
+    font-size:1.8rem;
+    line-height:1
+}
+.items {
+    flex:1;
+    overflow-y:auto
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: .92rem;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.item-img {
+    width: 75px;
+    height: 95px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.item-name {
+    font-size: .82rem;
+    font-weight: 500;
+}
+
+.item-details small {
+    color: var(--muted);
+}
+.item button {
+    background:none;
+    border:0;
+    color:var(--muted);
+    text-decoration:underline
+}
+.total {
+    display:flex;
+    justify-content:space-between;
+    font-size:1.15rem;
+    margin:18px 0
+}
+.toast {
+    position:fixed;
+    left:50%;
+    bottom:calc(24px + env(safe-area-inset-bottom,0px));
+    transform:translate(-50%,40px);
+    background:#000;
+    color:#fff;
+    padding:10px 22px;
+    opacity:0;
+    transition:.3s;
+    z-index:50;
+    pointer-events:none
+}
+.toast.show {
+    opacity:1;
+    transform:translate(-50%,0)
+}
+@media (prefers-reduced-motion:reduce) {
+    * {
+        scroll-behavior:auto!important;
+        transition:none!important
+    }
+}
+@media (max-width:900px) {
+    .feature {
+        grid-template-columns:1fr
+    }
+    .t4 {
+        grid-auto-columns:62%
+    }
+    .tiles {
+        grid-template-columns:repeat(2,1fr)
+    }
+    .cols {
+        grid-template-columns:1fr 1fr
+    }
+    .t2 {
+        grid-auto-columns:62%
+    }
+    .search {
+        width:100%;
+        order:9
+    }
+    .sp {
+        display:none
+    }
+    .icons {
+        margin-left:auto
+    }
+    nav.main {
+        order:8;
+        width:100%;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        white-space:nowrap;
+        gap:22px
+    }
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: clamp(30px, 5vw, 60px);
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-family: var(--round);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin: 12px 0 24px;
+  font-weight: 300;
+}
+
+.hero-text a {
+  background: #fff;
+  color: #000;
+  padding: 12px 30px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.hero-text a:hover {
+  opacity: 0.85;
+}
+
+/* Bolinhas de navegação */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+.Titulo{
+    font-family: var(--logo);
+}
+  </style>
+ <link rel="stylesheet" href="mobile.css">
+  <script src="menu.js" defer></script>
+ </head>
+ <body>
+  <header>
+   <div class="hd pad">
+    <a class="logo" href="#topo">
+     Mar&eacute; Alta
+    </a>
+    
+    <nav aria-label="Cole&ccedil;&otilde;es" class="main">
+     <a href="index.html">
+      Home
+     </a>
+        <a href="vestidos.html">
+      Vestidos
+     </a>
+     <a href="acessorios.html">
+     Acessórios
+     </a>
+     <a href="conjuntos.html">
+      Conjuntos
+     </a>
+     <a href="biquinis.html">
+      Bíquinis
+     </a>
+    </nav>
+    <span class="sp">
+    </span>
+    <form class="search" id="sf" role="search">
+     <input aria-label="Buscar" id="q" placeholder="Buscar" type="search"/>
+     <button aria-label="Buscar" type="submit">
+      <svg class="i" viewbox="0 0 24 24">
+       <circle cx="11" cy="11" r="6.5">
+       </circle>
+       <path d="M16 16l5 5">
+       </path>
+      </svg>
+     </button>
+    </form>
+    <div class="icons">
+     <button aria-label="Favoritos" class="ic" id="open-fav">
+      <svg class="i" viewbox="0 0 24 24">
+       <path d="M12 20.5l-1.2-1.1C6 15.2 3 12.5 3 9a4.5 4.5 0 0 1 8.2-2.6h1.6A4.5 4.5 0 0 1 21 9c0 3.500-3 6.200-7.800 10.400z">
+       </path>
+      </svg>
+      <span class="badge" id="fcount">
+       0
+      </span>
+     </button>
+     <button aria-label="Minha conta" class="ic">
+      <svg class="i" viewbox="0 0 24 24">
+       <circle cx="12" cy="8" r="3.8">
+       </circle>
+       <path d="M4.500 20.500c.8-4 4-5.500 7.500-5.500s6.700 1.500 7.500 5.500">
+       </path>
+      </svg>
+     </button>
+     <button aria-label="Abrir sacola" class="ic" id="open-cart">
+      <svg class="i" viewbox="0 0 24 24">
+       <path d="M3 4h2.200l2.200 10.500h10.400L20.500 7H6">
+       </path>
+       <circle cx="9.500" cy="19" r="1.400">
+       </circle>
+       <circle cx="17" cy="19" r="1.400">
+       </circle>
+      </svg>
+      <span class="badge" id="count">
+       0
+      </span>
+     </button>
+    </div>
+   </div>
+  </header>
+  <main id="topo">
+   
+   <section class="feature pad" id="trends">
+    <div class="ban" id="ban">
+     <div class="ov">
+      <small>
+       Novidades
+      </small>
+      <strong>
+       Conjuntos
+      </strong>
+      <a href="#trends-row">
+       Comprar agora
+      </a>
+     </div>
+    </div>
+    <div id="trends-row">
+     <div class="sec-h">
+      <div>
+       <h2 class="Titulo">
+            TRENDS
+       </h2>
+       <p>
+        A pe&ccedil;a mais vers&aacute;til e amada!
+       </p>
+      </div>
+      <div class="arrows">
+       <button aria-label="Anterior" data-d="-1" data-t="tr">
+        <svg class="i" viewbox="0 0 24 24">
+         <path d="M20 12H4M10 6l-6 6 6 6">
+         </path>
+        </svg>
+       </button>
+       <button aria-label="Pr&oacute;ximo" data-d="1" data-t="tr">
+        <svg class="i" viewbox="0 0 24 24">
+         <path d="M4 12h16M14 6l6 6-6 6">
+         </path>
+        </svg>
+       </button>
+      </div>
+     </div>
+     <div class="track t2" id="tr">
+     </div>
+    </div>
+   </section>
+   
+   <section class="blk pad" id="apostas">
+    <div class="sec-h">
+     <div>
+      <h2 class="Titulo">
+       MAIS VENDIDOS
+      </h2>
+      <p>
+       Os estilosos que dominam o ver&atilde;o!
+      </p>
+     </div>
+     <div class="arrows">
+      <button aria-label="Anterior" data-d="-1" data-t="ap">
+       <svg class="i" viewbox="0 0 24 24">
+        <path d="M20 12H4M10 6l-6 6 6 6">
+        </path>
+       </svg>
+      </button>
+      <button aria-label="Pr&oacute;ximo" data-d="1" data-t="ap">
+       <svg class="i" viewbox="0 0 24 24">
+        <path d="M4 12h16M14 6l6 6-6 6">
+        </path>
+       </svg>
+      </button>
+     </div>
+    </div>
+    <div class="track t4" id="ap">
+    </div>
+   </section>
+
+   <br><br> <br><br>
+
+    <section class="hero-slider" id="hero-slider">
+  <div class="slides">
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url('img/bannerHome/banner1.jpeg');">
+      <div class="hero-text">
+        
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('img/bannerHome/banner2.jpeg');">
+      <div class="hero-text">
+       
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('img/bannerHome/banner3.jpeg');">
+      <div class="hero-text">
+       
+    </div>
+  </div>
+
+  <!-- Indicadores (Bolinhas) -->
+  <div class="slider-dots">
+    <span class="dot active" onclick="setSlide(0)"></span>
+    <span class="dot" onclick="setSlide(1)"></span>
+    <span class="dot" onclick="setSlide(2)"></span>
+  </div>
+</section>
+
+   <section class="blk pad" id="categorias">
+    <div class="tiles" id="tiles">
+    </div>
+   </section>
+
+  </main>
+  <footer class="pad">
+   <div class="cols">
+    <div>
+     <h4>
+      Institucional
+     </h4>
+     <ul>
+      <li>
+       <a href="#">
+        Sobre n&oacute;s
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Aplicativo
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Revenda a marca
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Trabalhe conosco
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Ajuda
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4>
+      Pol&iacute;ticas
+     </h4>
+     <ul>
+      <li>
+       <a href="#">
+        Trocas e devolu&ccedil;&otilde;es
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Cancelamentos
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Formas de pagamento
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Prazos e entregas
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Pol&iacute;tica de privacidade
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4>
+      Atendimento
+     </h4>
+     <ul>
+      <li>
+       (00) 0000-0000
+      </li>
+      <li>
+       contato@marealta.com.br
+      </li>
+      <li>
+       Seg. a sex., 8h &agrave;s 18h
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4>
+      Formas de pagamento
+     </h4>
+     <div class="pay">
+      <span>
+       Visa
+      </span>
+      <span>
+       Mastercard
+      </span>
+      <span>
+       Elo
+      </span>
+      <span>
+       Pix
+      </span>
+      <span>
+       Boleto
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="copy">
+    2026 Maré Alta. Todos os direitos reservados a <a href="https://github.com/AishaBitler">Aisha Bitler Oliveira</a>. Loja fict&iacute;cia criada para fins de estudo.
+   </div>
+  </footer>
+  <div class="fixed">
+   <button aria-label="Subir ao topo" class="up" id="up">
+    Subir
+    <svg class="i" viewbox="0 0 24 24">
+     <path d="M5 15l7-7 7 7">
+     </path>
+    </svg>
+   </button>
+   <a aria-label="Falar no WhatsApp" class="wa" href="#">
+    <svg viewbox="0 0 24 24">
+     <path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.800 14.200c-.2.700-1.400 1.300-1.900 1.300-.5.100-1.100.1-3.500-.8-3-1.200-4.900-4.200-5-4.400-.2-.2-1.200-1.600-1.200-3s.8-2.100 1-2.400c.3-.3.600-.4.800-.4h.6c.2 0 .4 0 .6.500.2.600.8 2 .9 2.200.1.100.1.300 0 .5-.1.200-.2.300-.4.500l-.5.600c-.2.200-.3.400-.1.700.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.700-.1l2 1c.3.100.5.200.6.300.1.200.1.800-.1 1.500z">
+     </path>
+    </svg>
+   </a>
+  </div>
+  <aside aria-hidden="true" aria-label="Painel" class="drawer" id="drawer">
+   <button aria-label="Fechar" class="close" id="close-cart">
+    &times;
+   </button>
+   <h2 id="dtitle">
+    Sua sacola
+   </h2>
+   <div class="items" id="items">
+   </div>
+   <div class="total" id="totalrow">
+    <span>
+     Total
+    </span>
+    <strong id="total">
+     R$ 0,00
+    </strong>
+   </div>
+   <button class="add" id="checkout" style="margin-top:0">
+    Finalizar compra
+   </button>
+  </aside>
+  <div class="toast" id="toast" role="status">
+  </div>
+  <script>
+   
+   const IMAGENS = {
+     banner: "img/conjuntos/azulBrilhante.jpeg", // Ex.: "img/banner-verao.jpg"
+     produtos: {
+       1: "img/conjuntos/conjuntoCroche.jpeg",  // Conjunto cropped babado + calça renda Maré
+       2: "img/conjuntos/dourado.jpeg",  // Conjunto tule pérola cropped + saia
+       3: "img/vestidos/vestidoBranco.jpeg",  // Conjunto linho cropped + short Brisa
+       4: "img/conjuntos/lantejola.jpeg",  // Conjunto biquíni concha + canga
+       32: "img/biquinis/biquini.png",  // Vestido longo renda bordada Maré
+       6: "img/vestidos/vestido.jpeg",  // Vestido longo tule halter aquarela
+       7: "img/vestidos/vestidoColorido.jpeg",  // Vestido longo tule jardim
+       8: "img/conjuntos/listrado.png",  // Vestido midi linho horizonte
+       9: "img/vestidos/vestidoCroche.jpeg",  // Vestido longo fenda coral
+       10: "img/vestidos/vestidoVerde.jpeg"  // Vestido curto crochê areia
+     },
+     categorias: {
+       vestidos: "img/vestidos/vestidoFlor.jpg", // Ex.: "img/categoria-vestidos.jpg"
+       sports: "img/acessorios/chapeu.jpeg",   // Ex.: "img/categoria-sports.jpg"
+       conjuntos: "img/conjuntos/conjuntoVerde.jpeg",// Ex.: "img/categoria-conjuntos.jpg"
+       biquini: "img/biquinis/biquiniAzul.jpeg"   // Ex.: "img/categoria-biquini.jpg"
+     }
+   };
+
+   const COL={rosa:"#E8A0AE",azul:"#8FB8DE",coral:"#F28C6B",areia:"#E3C9A0",branco:"#F4EFE9",verde:"#9CC5B5",preto:"#222222",bege:"#D8C3A5",marrom:"#795548",cinza:"#A0A0A0",offwhite:"#FAF7F2",champanhe:"#E8D5B7",dourado:"#C9A44C",prata:"#C0C0C0",vermelho:"#D62828",pink:"#E84393",lilas:"#B5A0D8",vinho:"#722F37",laranja:"#ED8B35",amarelo:"#F2D04F",oliva:"#85865A",marinho:"#192D50",terracota:"#C16E52",nude:"#D9B49A"};
+
+const BG=["linear-gradient(180deg,#F6E3D6,#E8C4B2)","linear-gradient(180deg,#F5F7F9,#D9E3EC)","linear-gradient(180deg,#FBF1EA,#F1D4C4)","linear-gradient(180deg,#F8F8F6,#E4E1DA)"];
+
+const ALL={P:1,M:1,G:1,GG:1};
+
+const P=[
+{id:1,nome:"Conjunto Crochê Sunset Pearl",cod:"016919",preco:349.9,cat:"Conjunto",cores:["bege","preto"],tam:ALL,bg:0,row:"tr",tag:"Novo"},
+{id:2,nome:"Conjunto Metallic Glow",cod:"016691",preco:419.9,cat:"Conjunto",cores:["dourado", "cinza"],tam:{P:1,M:1,G:0,GG:0},bg:2,row:"tr"},
+{id:3,nome:"Vestido Maxi Cut-Out White Sands",cod:"016436",preco:329.9,cat:"Conjunto",cores:["areia",,"branco","offwhite"],tam:ALL,bg:3,row:"tr"},
+{id:4,nome:"Conjunto Sparkle Crystal Festival",cod:"016436",preco:489.9,cat:"Conjunto",cores:["dourado","prata", "preto"],tam:ALL,bg:3,row:"tr"},
+{id:32,nome:"Túnica Rendada Noir Chic",cod:"016807",preco:190.9,cat:"Biquini",cores:["marrom","terracota","preto", ],tam:ALL,bg:0,row:"ap"},
+{id:6,nome:"Vestido Longo Crochê Sol Dourado",cod:"016446",preco:329.9,cat:"Vestido",cores:["dourado", "cinza"],tam:{P:1,M:1,G:0,GG:0},bg:1,row:"ap"},
+{id:7,nome:"Vestido Longo Tule Sunset Glow",cod:"016445",preco:359.9,cat:"Vestido",cores:["pink", "azul"],tam:ALL,bg:2,row:"ap",tag:"Novo"},
+{id:8,nome:"Conjunto Resort Náutico Breeze",cod:"016512",preco:279.9,cat:"Vestido",cores:["marinho","vermelho", "marrom"],tam:ALL,bg:3,row:"ap"},
+{id:9,nome:"Vestido Maxi Croché Cut-Out Sereia",cod:"016530",preco:400.9,cat:"Vestido",cores:["white"],tam:{P:1,M:1,G:1,GG:0},bg:0,row:"ap"},
+{id:10,nome:"Vestido Midi Drapeado Olive Riviera",cod:"016577",preco:299.9,cat:"Vestido",cores:["oliva","marrom", "vinho"],tam:ALL,bg:1,row:"ap"}
+];
+
+const SKIN="#D9A98C",HAIR="#4A2E22";
+function art(cat,c){
+  const f=`class="dress" style="fill:${c}"`;
+  let b=`<ellipse cx="150" cy="215" rx="150" ry="260" fill="#fff" opacity=".28"/><circle cx="150" cy="54" r="30" fill="${HAIR}"/><circle cx="150" cy="58" r="17" fill="${SKIN}"/><rect x="143" y="72" width="14" height="18" fill="${SKIN}"/>`;
+  if(cat==="Vestido")b+=`<path ${f} d="M124 92L142 82h16l18 10-4 62 14 100 18 150H98l18-150 14-100z"/>`;
+  else if(cat==="Conjunto")b+=`<path ${f} d="M122 92h56l-6 62h-44z"/><path ${f} d="M126 160h48l24 240h-44l-4-170-4 170h-44z"/><path fill="${SKIN}" d="M128 154h44v8h-44z"/>`;
+  else b+=`<path fill="${SKIN}" d="M124 92h52l-4 108 12 70h-68l12-70z"/><path ${f} d="M124 104l26 18 26-18-4 36h-44z"/><path ${f} d="M120 240h60l-30 44z"/>`;
+  return `<svg class="art" viewBox="0 0 300 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${b}</svg>`;
+}
+let cart=[],favs=new Set(),view="cart",busca="";
+const brl=v=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const $=id=>document.getElementById(id);
+const heart='<svg class="i" viewBox="0 0 24 24"><path d="M12 20.500l-1.200-1.100C6 15.200 3 12.500 3 9a4.500 4.500 0 0 1 8.200-2.600h1.600A4.500 4.500 0 0 1 21 9c0 3.500-3 6.200-7.800 10.400z"/></svg>';
+const card=p=>`<article class="card" data-id="${p.id}"><div class="ph" style="background:${BG[p.bg]}">${p.tag?`<span class="tag">${p.tag}</span>`:""}${IMAGENS.produtos[p.id]?`<img class="art" src="${IMAGENS.produtos[p.id]}" alt="${p.nome}" style="object-fit:cover" onerror="handleImageError(this)">`:art(p.cat,COL[p.cores[0]])}</div>
+<div class="r1"><div class="sws">${p.cores.map((k,i)=>`<button class="sw" data-c="${COL[k]}" aria-pressed="${i==0}" aria-label="Cor ${k}" style="background:${COL[k]}"></button>`).join("")}</div><button class="fav" data-fav="${p.id}" aria-pressed="${favs.has(p.id)}" aria-label="Favoritar">${heart}</button></div>
+<p class="nm">${p.nome}</p><p class="cd">Cód. ${p.cod}</p><p class="pr">${brl(p.preco)}</p><p class="pc">6x de ${brl(p.preco/6)}</p>
+<div class="szs">${Object.entries(p.tam).map(([s,ok])=>`<button class="sz" data-s="${s}" aria-pressed="false" ${ok?"":"disabled"}>${s}</button>`).join("")}</div>
+<button class="add" data-add="${p.id}">Adicionar à sacola</button></article>`;
+function renderRows(){
+  ["tr","ap"].forEach(r=>{const l=P.filter(p=>p.row===r&&p.nome.toLowerCase().includes(busca));
+    $(r).innerHTML=l.length?l.map(card).join(""):'<p class="empty">Nenhuma peça encontrada. Tente outra busca.</p>'});
+}
+function handleImageError(img){
+  // Se o caminho da foto estiver errado, volta para a ilustração original.
+  if(img.closest(".ph")){
+    const card=img.closest(".card");
+    const produto=P.find(p=>p.id===Number(card?.dataset.id));
+    if(produto) img.outerHTML=art(produto.cat,COL[produto.cores[0]]);
+    else img.remove();
+    return;
+  }
+
+  if(img.closest(".tile")){
+    const tile=img.closest(".tile");
+    const nome=tile.querySelector("h3")?.textContent || "";
+    const tipo=nome==="Vestidos"?"Vestido":nome==="Biquíni"?"Biquíni":"Conjunto";
+    img.outerHTML=art(tipo,"rgba(255,255,255,.55)");
+    return;
+  }
+
+  if(img.closest("#ban")){
+    img.remove();
+    $("ban").insertAdjacentHTML(
+      "afterbegin",
+      `<div style="position:absolute;inset:0;background:linear-gradient(180deg,#F3C9C5,#E39BA4 55%,#D9857F)"></div>${art("Vestido","#F7D3D6")}`
+    );
+  } else {
+    img.remove();
+  }
+}
+
+function renderStatic(){
+  const bannerImagem = IMAGENS.banner
+    ? `<img src="${IMAGENS.banner}" alt="Novidades da coleção Maré Alta" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="handleImageError(this)">`
+    : `<div style="position:absolute;inset:0;background:linear-gradient(180deg,#F3C9C5,#E39BA4 55%,#D9857F)"></div>${art("Vestido","#F7D3D6")}`;
+  $("ban").insertAdjacentHTML("afterbegin", bannerImagem);
+
+  const T=[
+    ["Vestidos","Vestido","#E8A0AE","#C97B8B","vestidos","vestidos.html"],
+    ["Acessórios","Conjunto","#8FB8DE","#5E8DB8","sports","acessorios.html"],
+    ["Conjuntos","Conjunto","#F28C6B","#C96A4A","conjuntos","conjuntos.html"],
+    ["Biquíni","Biquíni","#E3C9A0","#BFA06E","biquini","biquinis.html"]
+  ];
+
+  $("tiles").innerHTML=T.map(t=>{
+    const imagem=IMAGENS.categorias[t[4]];
+    const visual=imagem
+      ? `<img class="art" src="${imagem}" alt="${t[0]}" style="object-fit:cover" onerror="handleImageError(this)">`
+      : art(t[1],"rgba(255,255,255,.55)");
+    return `<a class="tile" href="${t[5]}" style="background:linear-gradient(180deg,${t[2]},${t[3]})">${visual}<h3>${t[0]}</h3><span>Confira</span></a>`;
+  }).join("");
+}
+function renderDrawer(){
+  const list=view==="cart"?cart:P.filter(p=>favs.has(p.id));
+  $("dtitle").textContent=view==="cart"?"Sua sacola":"Seus favoritos";
+  $("totalrow").style.display=$("checkout").style.display=view==="cart"?"":"none";
+ $("items").innerHTML = list.length
+    ? list.map((p, i) => `
+        <div class="item">
+
+            <div class="item-info">
+
+                <img
+                    class="item-img"
+                    src="${IMAGENS.produtos[p.id]}"
+                    alt="${p.nome}"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="item-details">
+
+                    <span class="item-name">
+                        ${p.nome.toUpperCase()}
+                    </span>
+
+                    <small>
+                        ${view === "cart" ? "Tam. " + p.t + " · " : ""}
+                        ${brl(p.preco)}
+                    </small>
+
+                </div>
+
+            </div>
+
+            <button data-rm="${i}">
+                Remover
+            </button>
+
+        </div>
+    `).join("")
+    : `<p class="empty">${
+        view === "cart"
+            ? "Sua sacola está vazia. Escolha uma peça na coleção."
+            : "Você ainda não favoritou nenhuma peça."
+    }</p>`;
+  $("count").textContent=cart.length;$("fcount").textContent=favs.size;
+  $("total").textContent=brl(cart.reduce((s,p)=>s+p.preco,0));
+}
+function toggle(o){$("drawer").classList.toggle("open",o);$("drawer").setAttribute("aria-hidden",!o)}
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("show"),1800)}
+document.addEventListener("click",e=>{
+  const sw=e.target.closest(".sw"),sz=e.target.closest(".sz"),fv=e.target.closest(".fav"),ad=e.target.closest("[data-add]"),rm=e.target.closest("[data-rm]"),ar=e.target.closest("[data-t]");
+  if(sw){const c=sw.closest(".card");c.querySelectorAll(".sw").forEach(x=>x.setAttribute("aria-pressed",x===sw));c.querySelectorAll(".dress").forEach(d=>d.style.fill=sw.dataset.c)}
+  if(sz){const c=sz.closest(".card");c.querySelectorAll(".sz").forEach(x=>x.setAttribute("aria-pressed",x===sz))}
+  if(fv){const id=+fv.dataset.fav;favs.has(id)?favs.delete(id):favs.add(id);fv.setAttribute("aria-pressed",favs.has(id));renderDrawer()}
+  if(ad){const c=ad.closest(".card"),s=c.querySelector('.sz[aria-pressed="true"]');
+    if(!s){toast("Escolha um tamanho");return}
+    cart.push({...P.find(p=>p.id==ad.dataset.add),t:s.dataset.s});renderDrawer();toast("Adicionado à sacola")}
+  if(rm){const i=+rm.dataset.rm;if(view==="cart")cart.splice(i,1);else favs.delete(P.filter(p=>favs.has(p.id))[i].id);renderRows();renderDrawer()}
+  if(ar){const t=$(ar.dataset.t),w=t.firstElementChild.getBoundingClientRect().width+24;t.scrollBy({left:w*ar.dataset.d,behavior:"smooth"})}
+});
+$("open-cart").onclick=()=>{view="cart";renderDrawer();toggle(true)};
+$("open-fav").onclick=()=>{view="fav";renderDrawer();toggle(true)};
+$("close-cart").onclick=()=>toggle(false);
+$("checkout").onclick=()=>{if(!cart.length)return;cart=[];renderDrawer();toggle(false);toast("Pedido recebido! Obrigada por comprar na Maré Alta.")};
+$("q").oninput=e=>{busca=e.target.value.trim().toLowerCase();renderRows()};
+$("sf").onsubmit=e=>{e.preventDefault();$("apostas").scrollIntoView()};
+$("up").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+renderRows();renderStatic();renderDrawer();
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slides.length;
+let slideInterval;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    dots[i].classList.toggle('active', i === index);
+  });
+  currentSlide = index;
+}
+
+function nextSlide() {
+  let next = (currentSlide + 1) % totalSlides;
+  showSlide(next);
+}
+
+function setSlide(index) {
+  showSlide(index);
+  resetTimer();
+}
+
+function startTimer() {
+  slideInterval = setInterval(nextSlide, 4000); // Troca a cada 4 segundos
+}
+
+function resetTimer() {
+  clearInterval(slideInterval);
+  startTimer();
+}
+
+// Inicia o carrossel e pausa ao passar o mouse por cima
+startTimer();
+
+const heroSlider = document.getElementById('hero-slider');
+heroSlider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+heroSlider.addEventListener('mouseleave', startTimer);
+  </script>
+ <script src="fotos.js"></script>
+<script src="abrirProduto.js"></script>
+ </body>
+</html>

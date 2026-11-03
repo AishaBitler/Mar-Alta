@@ -1,0 +1,117 @@
+/* =====================================================================
+   Maré Alta — ajustes para celular
+   Carregado no fim do <head> de todas as páginas (sobrescreve o resto).
+   Para mexer no visual do celular, edite só este arquivo.
+   ===================================================================== */
+
+.burger{display:none;width:40px;height:40px;margin-left:-8px;background:none;border:0;padding:0;color:inherit;cursor:pointer;align-items:center;justify-content:center;position:relative}
+.burger span{position:absolute;left:9px;right:9px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s,opacity .2s,top .25s}
+.burger span:nth-child(1){top:12px}
+.burger span:nth-child(2){top:19px}
+.burger span:nth-child(3){top:26px}
+header.menu-open .burger span:nth-child(1){top:19px;transform:rotate(45deg)}
+header.menu-open .burger span:nth-child(2){opacity:0}
+header.menu-open .burger span:nth-child(3){top:19px;transform:rotate(-45deg)}
+
+@media (max-width:760px){
+
+  body{overflow-x:hidden}
+
+  /* ---------- Cabeçalho: menu hambúrguer + logo + ícones ---------- */
+  header{position:relative;z-index:50;background:var(--bg,#fff)}
+  header .hd{
+    display:grid;grid-template-columns:auto 1fr auto;
+    gap:0 10px;align-items:center;flex-wrap:nowrap;
+    padding-top:10px;padding-bottom:10px
+  }
+  header .burger{display:flex;grid-column:1;grid-row:1}
+  header .logo{grid-column:2;grid-row:1;order:0;font-size:1.55rem;white-space:nowrap}
+  header .icons{grid-column:3;grid-row:1;order:0;margin-left:0;gap:14px}
+  .sp{display:none}
+
+  /* painel do menu (fechado por padrão) */
+  header nav.main,header .search{display:none}
+  header.menu-open nav.main{
+    display:flex;flex-direction:column;flex-wrap:nowrap;gap:0;
+    grid-column:1/-1;grid-row:2;order:0;width:auto;overflow:visible;white-space:normal;
+    font-size:1rem;letter-spacing:.04em;margin-top:10px;border-top:1px solid var(--line,#e5e5e5)
+  }
+  header.menu-open nav.main a{padding:14px 4px;border-bottom:1px solid var(--line,#e5e5e5);text-decoration:none}
+  header.menu-open nav.main a:active{background:rgba(0,0,0,.05)}
+  header.menu-open .search{display:flex;grid-column:1/-1;grid-row:3;order:0;width:100%;margin:14px 0 4px}
+  header .search input{padding:6px 0;font-size:1rem}
+  body.menu-lock{overflow:hidden}
+
+  /* ---------- Banner (slider) ---------- */
+  .hero-slider{height:clamp(220px,62vw,360px);min-height:0;margin-bottom:24px}
+  .hero-text h2{font-size:clamp(1.8rem,9vw,2.6rem)}
+  .hero-text a{padding:10px 22px;font-size:.8rem}
+  .slider-dots{bottom:12px}
+
+  /* ---------- Títulos de seção ---------- */
+  .blk{margin-top:36px}
+  .sec-h{margin:6px 0 16px;gap:10px}
+  .sec-h h2{font-size:1.7rem}
+  .sec-h p{font-size:.9rem}
+  .arrows{gap:14px}
+
+  /* ---------- Categorias (Vestidos / Acessórios / ...) ---------- */
+  .tiles{gap:10px}
+  .tile{padding:12px}
+  .tile h3{font-size:1.1rem;letter-spacing:0;line-height:1.1}
+  .tile span{font-size:.8rem}
+
+  /* ---------- Cards de produto ---------- */
+  .t4,.t2{grid-auto-columns:64%;gap:14px}
+  .nm{min-height:2.4em;line-height:1.2}
+  .cd{margin:2px 0 6px}
+  .pr{font-size:1rem}
+  .pc{font-size:.85rem;margin-bottom:8px}
+  .szs{gap:6px}
+  .sz{width:36px;height:36px;font-size:.85rem}
+  .add{font-size:.72rem;letter-spacing:.02em;padding:11px 6px;white-space:nowrap}
+  .sw{width:24px;height:24px}
+  .sws{gap:7px}
+  .ph .cn{width:30px;height:30px;font-size:1.15rem}
+  .ph .cc{font-size:.65rem}
+
+  /* ---------- Listagem (vestidos, biquínis, ...) ---------- */
+  .crumb{padding-top:12px;font-size:.8rem}
+  .ptitle{margin:6px 0 14px}
+  .ptitle h1{font-size:2rem}
+  .toolbar{gap:12px 16px;padding:12px 0;margin-bottom:18px}
+  .toolbar .fg{flex:1 1 calc(50% - 8px);min-width:0}
+  .toolbar .fg:first-child{flex-basis:100%}
+  .fg .frow#fcores{flex-wrap:nowrap;overflow-x:auto;padding:4px 4px 6px;margin:-4px -4px -6px;scrollbar-width:none}
+  .fg .frow#fcores::-webkit-scrollbar{display:none}
+  .fc{flex:0 0 auto}
+  .ft{min-width:34px;height:34px;padding:0 6px;font-size:.85rem}
+  .fg .frow{gap:6px}
+  .fg select{min-width:0;width:100%}
+  .pgrid{gap:26px 10px}
+
+  /* ---------- Página do produto ---------- */
+  .prod{gap:18px;margin-top:12px}
+  .pinfo h1{font-size:1.5rem}
+  .pinfo .pr{font-size:1.4rem;margin-top:10px}
+  .pinfo .lb{margin:16px 0 6px}
+  .thumbs{gap:8px}
+  .nav-c{width:36px;height:36px;font-size:1.4rem}
+
+  /* ---------- Rodapé e botões flutuantes ---------- */
+  footer{padding-bottom:84px}
+  .fixed{right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));gap:8px}
+  .up{padding:6px 10px;font-size:.6rem}
+  .up svg{width:16px;height:16px}
+  .wa{width:46px;height:46px}
+  .wa svg{width:26px;height:26px}
+}
+
+/* telas bem pequenas */
+@media (max-width:360px){
+  header .logo{font-size:1.2rem}
+  header .icons{gap:8px}
+  header .hd{gap:0 6px}
+  .tile h3{font-size:1rem}
+  .sz{width:32px;height:32px}
+}

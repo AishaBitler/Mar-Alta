@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <title>
+   Acess&oacute;rios &mdash; Mar&eacute; Alta
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&amp;family=Fredoka:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root {
+    --bg:#fff;
+    --ink:#000;
+    --muted:#6B6B6B;
+    --line:#EAEAEA;
+    --chip:#EDEDED;
+    --yellow:#FFF200;
+    --foot:#F4F4F4;
+    --sans:"Roboto","Helvetica Neue",Arial,sans-serif;
+    --logo:"Bodoni Moda","Didot",Georgia,serif;
+    --round:"Fredoka","Arial Rounded MT Bold",Arial,sans-serif;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    color-scheme:light;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg:#111;
+        --ink:#fff;
+        --muted:#A5A5A5;
+        --line:#2C2C2C;
+        --chip:#2A2A2A;
+        --foot:#1A1A1A;
+        color-scheme:dark
+    }
+}
+:root[data-theme="dark"] {
+    --bg:#111;
+    --ink:#fff;
+    --muted:#A5A5A5;
+    --line:#2C2C2C;
+    --chip:#2A2A2A;
+    --foot:#1A1A1A;
+    color-scheme:dark
+}
+html {
+    scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);
+    scroll-behavior:smooth
+}
+* {
+    box-sizing:border-box
+}
+body {
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.4
+}
+a {
+    color:inherit;
+    text-decoration:none
+}
+button {
+    font:inherit;
+    color:inherit;
+    cursor:pointer
+}
+:focus-visible {
+    outline:2px solid var(--ink);
+    outline-offset:3px
+}
+.pad {
+    padding-left:clamp(16px,3.2vw,48px);
+    padding-right:clamp(16px,3.2vw,48px)
+}
+header {
+    position:sticky;
+    top:env(safe-area-inset-top,0px);
+    z-index:20;
+    background:var(--bg);
+    border-bottom:1px solid var(--line)
+}
+.hd {
+    display:flex;
+    align-items:center;
+    gap:26px;
+    padding-top:14px;
+    padding-bottom:14px;
+    flex-wrap:wrap
+}
+.logo {
+    font-family:var(--logo);
+    font-weight:700;
+    font-size:2rem;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    line-height:1
+}
+.pill {
+    background:var(--yellow);
+    color:#000;
+    padding:5px 14px;
+    border-radius:999px;
+    font-size:1rem;
+    text-transform:uppercase
+}
+nav.main {
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap
+}
+nav.main a {
+    text-transform:uppercase
+}
+nav.main a:hover {
+    text-decoration:underline;
+    text-underline-offset:6px
+}
+.sp {
+    flex:1
+}
+.search {
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid var(--ink);
+    width:240px
+}
+.search input {
+    flex:1;
+    border:0;
+    background:none;
+    color:var(--ink);
+    font:inherit;
+    padding:8px 0;
+    min-width:0;
+    outline-offset:6px
+}
+.search button,.ic {
+    background:none;
+    border:0;
+    padding:4px;
+    display:flex;
+    position:relative
+}
+svg.i {
+    width:26px;
+    height:26px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round
+}
+.badge {
+    position:absolute;
+    top:-4px;
+    right:-6px;
+    background:#000;
+    color:#fff;
+    font-size:.7rem;
+    min-width:18px;
+    height:18px;
+    border-radius:9px;
+    display:grid;
+    place-items:center
+}
+.icons {
+    display:flex;
+    gap:18px;
+    align-items:center
+}
+.feature {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    padding-top:4px;
+    align-items:start
+}
+.ban {
+    position:relative;
+    aspect-ratio:1/1.12;
+    overflow:hidden
+}
+.ban .ov {
+    position:absolute;
+    left:14px;
+    bottom:20%;
+    display:flex;
+    flex-direction:column;
+    color:#fff
+}
+.ban small {
+    font-size:clamp(1rem,2vw,1.6rem);
+    font-weight:300;
+    letter-spacing:.04em;
+    text-transform:uppercase
+}
+.ban strong {
+    font-family:var(--round);
+    font-weight:600;
+    font-size:clamp(2.6rem,5.6vw,4.6rem);
+    line-height:1;
+    text-transform:uppercase
+}
+.ban a {
+    background:#fff;
+    color:#000;
+    text-align:center;
+    font-size:.95rem;
+    text-transform:uppercase;
+    padding:2px 10px;
+    margin-top:4px
+}
+.sec-h {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:16px;
+    margin:12px 0 28px
+}
+.sec-h h2 {
+    font-size:clamp(2rem,3.4vw,2.7rem);
+    font-weight:400;
+    margin:0;
+    line-height:1.15
+}
+.sec-h p {
+    margin:2px 0 0
+}
+.arrows {
+    display:flex;
+    gap:28px
+}
+.arrows button {
+    background:none;
+    border:0;
+    padding:4px
+}
+.track {
+    display:grid;
+    grid-auto-flow:column;
+    gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none
+}
+.track::-webkit-scrollbar {
+    display:none
+}
+.t2 {
+    grid-auto-columns:calc((100% - 24px)/2)
+}
+.t4 {
+    grid-auto-columns:calc((100% - 72px)/4)
+}
+.card {
+    scroll-snap-align:start;
+    min-width:0
+}
+.ph {
+    aspect-ratio:7/10;
+    position:relative;
+    overflow:hidden
+}
+.art {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%
+}
+.tag {
+    position:absolute;
+    left:10px;
+    top:10px;
+    background:#000;
+    color:#fff;
+    font-size:.75rem;
+    padding:2px 10px;
+    text-transform:uppercase
+}
+.r1 {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:10px 0 6px;
+    min-height:28px
+}
+.sws {
+    display:flex;
+    gap:8px
+}
+.sw {
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    padding:0
+}
+.sw[aria-pressed="true"] {
+    outline:2px solid var(--ink);
+    outline-offset:2px
+}
+.fav svg {
+    width:24px;
+    height:24px;
+    stroke-width:1.4
+}
+.fav[aria-pressed="true"] svg {
+    fill:currentColor
+}
+.nm {
+    font-size:.82rem;
+    text-transform:uppercase;
+    margin:0
+}
+.cd {
+    font-size:.75rem;
+    color:var(--muted);
+    margin:2px 0 8px
+}
+.pr {
+    font-weight:700;
+    font-size:1.05rem;
+    margin:0
+}
+.pc {
+    color:var(--muted);
+    margin:0 0 10px
+}
+.szs {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap
+}
+.sz {
+    width:40px;
+    height:40px;
+    background:var(--chip);
+    border:0;
+    font-size:.95rem
+}
+.sz[aria-pressed="true"] {
+    background:#000;
+    color:#fff
+}
+.sz:disabled {
+    color:#BBB;
+    text-decoration:line-through;
+    cursor:not-allowed;
+    background:transparent;
+    border:1px solid var(--line)
+}
+.add {
+    width:100%;
+    margin-top:12px;
+    background:#000;
+    color:#fff;
+    border:0;
+    padding:12px;
+    text-transform:uppercase;
+    font-size:.85rem;
+    letter-spacing:.04em
+}
+.add:hover {
+    opacity:.85
+}
+:root[data-theme="dark"] .add,:root[data-theme="dark"] .sz[aria-pressed="true"] {
+    background:#fff;
+    color:#000
+}
+.blk {
+    margin-top:clamp(40px,5vw,72px)
+}
+.tiles {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px
+}
+.tile {
+    position:relative;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:20px
+}
+.tile h3 {
+    font-family:var(--round);
+    font-weight:600;
+    font-size:clamp(1.5rem,2.4vw,2.2rem);
+    margin:0;
+    text-transform:uppercase;
+    position:relative
+}
+.tile span {
+    position:relative;
+    text-transform:uppercase;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    font-size:.9rem
+}
+.empty {
+    color:var(--muted);
+    padding:24px 0
+}
+footer {
+    margin-top:clamp(48px,6vw,88px);
+    background:black;
+    padding-top:44px;
+    padding-bottom:28px
+}
+.cols {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px
+}
+footer h4 {
+    margin:0 0 12px;
+    text-transform:uppercase;
+    font-size:.9rem;
+    letter-spacing:.06em
+}
+footer ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:6px;
+    font-size:.92rem;
+    color:var(--muted)
+}
+footer a:hover {
+    color:var(--ink)
+}
+.pay {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap
+}
+.pay span {
+    border:1px solid var(--line);
+    background:var(--bg);
+    padding:3px 12px;
+    font-size:.8rem
+}
+.copy {
+    border-top:1px solid var(--line);
+    margin-top:30px;
+    padding-top:16px;
+    font-size:.8rem;
+    color:var(--muted)
+}
+.fixed {
+    position:fixed;
+    right:16px;
+    bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-end;
+    z-index:15
+}
+.up {
+    background:#000;
+    color:#fff;
+    border:0;
+    padding:8px 14px;
+    font-size:.7rem;
+    font-weight:700;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-transform:uppercase
+}
+.up svg {
+    width:20px;
+    height:20px;
+    stroke-width:3
+}
+.wa {
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:#25D366;
+    display:grid;
+    place-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.25)
+}
+.wa svg {
+    width:30px;
+    height:30px;
+    fill:#fff
+}
+.drawer {
+    position:fixed;
+    top:0;
+    right:0;
+    height:100%;
+    width:min(400px,100%);
+    background:var(--bg);
+    color:var(--ink);
+    z-index:40;
+    transform:translateX(100%);
+    transition:transform .3s;
+    padding:calc(20px + env(safe-area-inset-top,0px)) 24px calc(20px + env(safe-area-inset-bottom,0px));
+    display:flex;
+    flex-direction:column;
+    border-left:1px solid var(--line)
+}
+.drawer.open {
+    transform:none
+}
+.drawer h2 {
+    font-weight:400;
+    font-size:1.8rem;
+    margin:0 0 12px
+}
+.close {
+    align-self:flex-end;
+    background:none;
+    border:0;
+    font-size:1.8rem;
+    line-height:1
+}
+.items {
+    flex:1;
+    overflow-y:auto
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: .92rem;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.item-img {
+    width: 75px;
+    height: 95px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.item-name {
+    font-size: .82rem;
+    font-weight: 500;
+}
+
+.item-details small {
+    color: var(--muted);
+}
+.item button {
+    background:none;
+    border:0;
+    color:var(--muted);
+    text-decoration:underline
+}
+.total {
+    display:flex;
+    justify-content:space-between;
+    font-size:1.15rem;
+    margin:18px 0
+}
+.toast {
+    position:fixed;
+    left:50%;
+    bottom:calc(24px + env(safe-area-inset-bottom,0px));
+    transform:translate(-50%,40px);
+    background:#000;
+    color:#fff;
+    padding:10px 22px;
+    opacity:0;
+    transition:.3s;
+    z-index:50;
+    pointer-events:none
+}
+.toast.show {
+    opacity:1;
+    transform:translate(-50%,0)
+}
+@media (prefers-reduced-motion:reduce) {
+    * {
+        scroll-behavior:auto!important;
+        transition:none!important
+    }
+}
+@media (max-width:900px) {
+    .feature {
+        grid-template-columns:1fr
+    }
+    .t4 {
+        grid-auto-columns:62%
+    }
+    .tiles {
+        grid-template-columns:repeat(2,1fr)
+    }
+    .cols {
+        grid-template-columns:1fr 1fr
+    }
+    .t2 {
+        grid-auto-columns:62%
+    }
+    .search {
+        width:100%;
+        order:9
+    }
+    .sp {
+        display:none
+    }
+    .icons {
+        margin-left:auto
+    }
+    nav.main {
+        order:8;
+        width:100%;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        white-space:nowrap;
+        gap:22px
+    }
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: clamp(30px, 5vw, 60px);
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-family: var(--round);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin: 12px 0 24px;
+  font-weight: 300;
+}
+
+.hero-text a {
+  background: #fff;
+  color: #000;
+  padding: 12px 30px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.hero-text a:hover {
+  opacity: 0.85;
+}
+
+/* Bolinhas de navegação */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+.Titulo{
+    font-family: var(--logo);
+}
+/* ===== Página de vestidos ===== */
+nav.main a[aria-current]{text-decoration:underline;text-underline-offset:6px}
+.crumb{font-size:.85rem;color:var(--muted);padding-top:20px}
+.crumb a:hover{text-decoration:underline}
+.ptitle{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin:10px 0 24px}
+.ptitle h1{font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;margin:0;line-height:1.1}
+.ptitle p{margin:4px 0 0}
+.cnt{color:var(--muted)}
+.toolbar{display:flex;gap:16px 40px;flex-wrap:wrap;align-items:flex-end;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:28px}
+.fg{display:flex;flex-direction:column;gap:8px}
+.fg>span{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.fg .frow{display:flex;gap:8px;flex-wrap:wrap}
+.fg select{background:none;color:var(--ink);border:0;border-bottom:1px solid var(--ink);font:inherit;padding:8px 24px 8px 0;min-width:190px}
+.fg select option{color:#000}
+.fc{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);padding:0}
+.fc[aria-pressed="true"]{outline:2px solid var(--ink);outline-offset:2px}
+.ft{min-width:44px;height:36px;background:var(--chip);border:0;font-size:.95rem}
+.ft[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.clear{background:none;border:0;text-decoration:underline;text-underline-offset:4px;padding:8px 0;color:var(--ink)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 24px}
+.pgrid .empty{grid-column:1/-1}
+@media (max-width:1100px){.pgrid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.pgrid{grid-template-columns:repeat(2,1fr);gap:32px 12px}.fg select{min-width:150px}}
+
+.ft{padding:0 16px}
+.sz.w{width:auto;padding:0 16px}
+
+  </style>
+  <link rel="stylesheet" href="mobile.css">
+  <script src="menu.js" defer></script>
+ </head>
+ <body>
+  <header>
+   <div class="hd pad">
+    <a class="logo" href="index.html">
+     Mar&eacute; Alta
+    </a>
+    
+    <nav aria-label="Cole&ccedil;&otilde;es" class="main">
+     <a href="index.html">
+      Home
+     </a>
+        <a href="vestidos.html">
+      Vestidos
+     </a>
+     <a href="acessorios.html" aria-current="page">
+     Acessórios
+     </a>
+     <a href="conjuntos.html">
+      Conjuntos
+     </a>
+     <a href="biquinis.html">
+      Bíquinis
+     </a>
+    </nav>
+    <span class="sp">
+    </span>
+    <form class="search" id="sf" role="search">
+     <input aria-label="Buscar" id="q" placeholder="Buscar" type="search"/>
+     <button aria-label="Buscar" type="submit">
+      <svg class="i" viewbox="0 0 24 24">
+       <circle cx="11" cy="11" r="6.5">
+       </circle>
+       <path d="M16 16l5 5">
+       </path>
+      </svg>
+     </button>
+    </form>
+    <div class="icons">
+     <button aria-label="Favoritos" class="ic" id="open-fav">
+      <svg class="i" viewbox="0 0 24 24">
+       <path d="M12 20.5l-1.2-1.1C6 15.2 3 12.5 3 9a4.5 4.5 0 0 1 8.2-2.6h1.6A4.5 4.5 0 0 1 21 9c0 3.500-3 6.200-7.800 10.400z">
+       </path>
+      </svg>
+      <span class="badge" id="fcount">
+       0
+      </span>
+     </button>
+     <button aria-label="Minha conta" class="ic">
+      <svg class="i" viewbox="0 0 24 24">
+       <circle cx="12" cy="8" r="3.8">
+       </circle>
+       <path d="M4.500 20.500c.8-4 4-5.500 7.500-5.500s6.700 1.500 7.500 5.500">
+       </path>
+      </svg>
+     </button>
+     <button aria-label="Abrir sacola" class="ic" id="open-cart">
+      <svg class="i" viewbox="0 0 24 24">
+       <path d="M3 4h2.200l2.200 10.500h10.400L20.500 7H6">
+       </path>
+       <circle cx="9.500" cy="19" r="1.400">
+       </circle>
+       <circle cx="17" cy="19" r="1.400">
+       </circle>
+      </svg>
+      <span class="badge" id="count">
+       0
+      </span>
+     </button>
+    </div>
+   </div>
+  </header>
+
+  <section class="hero-slider" id="hero-slider">
+  <div class="slides">
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url('img/bannerHome/banner1.jpeg');">
+      <div class="hero-text">
+        
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('img/bannerHome/banner2.jpeg');">
+      <div class="hero-text">
+       
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('img/bannerHome/banner3.jpeg');">
+      <div class="hero-text">
+       
+    </div>
+  </div>
+
+  <!-- Indicadores (Bolinhas) -->
+  <div class="slider-dots">
+    <span class="dot active" onclick="setSlide(0)"></span>
+    <span class="dot" onclick="setSlide(1)"></span>
+    <span class="dot" onclick="setSlide(2)"></span>
+  </div>
+</section>
+
+  <main id="topo" class="pad">
+   <nav class="crumb" aria-label="Você está em"><a href="index.html">Início</a> / Acessórios</nav>
+   <div class="ptitle">
+    <div>
+     <h1 class="Titulo">ACESSÓRIOS</h1>
+     <p>Chapéus, bolsas e detalhes que completam o look de praia.</p>
+    </div>
+    <span class="cnt" id="cnt" role="status"></span>
+   </div>
+   <div class="toolbar">
+    <div class="fg"><span>Categoria</span><div class="frow" id="fcats"></div></div>
+    <div class="fg"><span>Cor</span><div class="frow" id="fcores"></div></div>
+    <div class="fg"><span>Ordenar por</span>
+     <select id="ord" aria-label="Ordenar por">
+      <option value="rel">Mais relevantes</option>
+      <option value="menor">Menor preço</option>
+      <option value="maior">Maior preço</option>
+      <option value="az">Nome (A–Z)</option>
+     </select>
+    </div>
+    <button class="clear" id="clr" hidden>Limpar filtros</button>
+   </div>
+   <div class="pgrid" id="pg"></div>
+  </main>
+
+  <footer class="pad">
+   <div class="cols">
+    <div>
+     <h4>
+      Institucional
+     </h4>
+     <ul>
+      <li>
+       <a href="#">
+        Sobre n&oacute;s
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Aplicativo
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Revenda a marca
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Trabalhe conosco
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Ajuda
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4>
+      Pol&iacute;ticas
+     </h4>
+     <ul>
+      <li>
+       <a href="#">
+        Trocas e devolu&ccedil;&otilde;es
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Cancelamentos
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Formas de pagamento
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Prazos e entregas
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Pol&iacute;tica de privacidade
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4>
+      Atendimento
+     </h4>
+     <ul>
+      <li>
+       (00) 0000-0000
+      </li>
+      <li>
+       contato@marealta.com.br
+      </li>
+      <li>
+       Seg. a sex., 8h &agrave;s 18h
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4>
+      Formas de pagamento
+     </h4>
+     <div class="pay">
+      <span>
+       Visa
+      </span>
+      <span>
+       Mastercard
+      </span>
+      <span>
+       Elo
+      </span>
+      <span>
+       Pix
+      </span>
+      <span>
+       Boleto
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="copy">
+    2026 Maré Alta. Todos os direitos reservados a <a href="https://github.com/AishaBitler">Aisha Bitler Oliveira</a>. Loja fict&iacute;cia criada para fins de estudo.
+   </div>
+  </footer>
+  <div class="fixed">
+   <button aria-label="Subir ao topo" class="up" id="up">
+    Subir
+    <svg class="i" viewbox="0 0 24 24">
+     <path d="M5 15l7-7 7 7">
+     </path>
+    </svg>
+   </button>
+   <a aria-label="Falar no WhatsApp" class="wa" href="#">
+    <svg viewbox="0 0 24 24">
+     <path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.800 14.200c-.2.700-1.400 1.300-1.900 1.300-.5.100-1.100.1-3.500-.8-3-1.200-4.900-4.200-5-4.400-.2-.2-1.200-1.600-1.200-3s.8-2.100 1-2.400c.3-.3.600-.4.800-.4h.6c.2 0 .4 0 .6.500.2.600.8 2 .9 2.200.1.100.1.300 0 .5-.1.200-.2.300-.4.500l-.5.600c-.2.200-.3.400-.1.700.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.700-.1l2 1c.3.100.5.200.6.300.1.200.1.800-.1 1.500z">
+     </path>
+    </svg>
+   </a>
+  </div>
+  <aside aria-hidden="true" aria-label="Painel" class="drawer" id="drawer">
+   <button aria-label="Fechar" class="close" id="close-cart">
+    &times;
+   </button>
+   <h2 id="dtitle">
+    Sua sacola
+   </h2>
+   <div class="items" id="items">
+   </div>
+   <div class="total" id="totalrow">
+    <span>
+     Total
+    </span>
+    <strong id="total">
+     R$ 0,00
+    </strong>
+   </div>
+   <button class="add" id="checkout" style="margin-top:0">
+    Finalizar compra
+   </button>
+  </aside>
+  <div class="toast" id="toast" role="status">
+  </div>
+  <script>
+// Coloque aqui o caminho da foto de cada produto (id: "img/arquivo.jpeg"). Sem foto, aparece a ilustração.
+const IMG={21:"img/acessorios/chapeu.jpeg", 22: "img/acessorios/bolsaPalha.jpeg", 23: "img/acessorios/oculos.jpeg", 25: "img/acessorios/bone.jpeg", 24: "img/acessorios/toalha.jpeg", 26: "img/acessorios/anel.jpeg", 27: "img/acessorios/rasteira.jpeg", 28: "img/acessorios/brinco.jpeg"};
+const COL={rosa:"#E8A0AE",azul:"#8FB8DE",coral:"#F28C6B",cinza:"#A0A0A0", areia:"#E3C9A0",branco:"#F4EFE9",verde:"#9CC5B5",beje:"#D8C3A5",marrom:"#8B5E3C",dourado:"#D4AF37",preto:"#222222"};
+const BG=["linear-gradient(180deg,#F6E3D6,#E8C4B2)","linear-gradient(180deg,#F5F7F9,#D9E3EC)","linear-gradient(180deg,#FBF1EA,#F1D4C4)","linear-gradient(180deg,#F8F8F6,#E4E1DA)"];
+const U={"Único":1};
+const CATS=["Chapéus","Bolsas","Óculos","Joias","Cangas","Calçados"];
+const P=[
+ {id:21,nome:"Chapéu Bucket Straw Sunlit",cod:"018101",preco:129.90,cat:"Chapéus",cores:["marrom","areia"],tam:U,bg:3},
+ {id:22,nome:"Bolsa Tote Palha Maré Chic",cod:"018102",preco:259.9,cat:"Bolsas",cores:["areia","marrom"],tam:U,bg:0},
+ {id:23,nome:"Óculos de Sol Vintage Cat-Eye Gold",cod:"018103",preco:199.9,cat:"Óculos",cores:["preto","marrom", "cinza"],tam:U,bg:1},
+ {id:24,nome:"Toalha Canga Caligrafia Praia",cod:"018104",preco:156.9,cat:"Cangas",cores:["marrom","preto"],tam:U,bg:2},
+ {id:25,nome:"Boné Beach Vibes White",cod:"018105",preco:129.9,cat:"Chapéus",cores:["cinza", "marrom", "preto"],tam:U,bg:3},
+ {id:26,nome:"Anel Solitário Oval Golden Glow",cod:"018106",preco:154.9,cat:"Joias",cores:["dourado","cinza"],tam:{16:1,18:1,20:1,22:0,},bg:1,tag:"Novo"},
+ {id:27,nome:"Sandália Rasteira Metalizada Gold Breeze",cod:"018107",preco:185.9,cat:"Calçados",cores:["marrom", "areia",],tam:{35:1,36:1,37:1,38:0,39:1},bg:0},
+ {id:28,nome:"Brincos Maxi Flor de Verão Gold",cod:"018107",preco:180.9,cat:"Joias",cores:["dourado","cinza"],tam:U,bg:0}
+];
+function art(cat,c){
+  const f=`class="dress" style="fill:${c}"`;
+  let b=`<ellipse cx="150" cy="215" rx="150" ry="260" fill="#fff" opacity=".28"/>`;
+  if(cat==="Chapéus")b+=`<path ${f} d="M100 235Q100 140 150 140T200 235z"/><ellipse ${f} cx="150" cy="235" rx="125" ry="30"/><path d="M101 218Q150 236 199 218v14Q150 250 101 232z" fill="#0F2E3A" opacity=".4"/>`;
+  else if(cat==="Bolsas")b+=`<path d="M108 195Q108 115 150 115T192 195" fill="none" stroke="#4A2E22" stroke-width="9" stroke-linecap="round"/><rect ${f} x="70" y="190" width="160" height="140" rx="18"/><path d="M70 240h160M70 285h160" stroke="#fff" opacity=".35" stroke-width="3"/>`;
+  else if(cat==="Óculos")b+=`<path d="M62 225L40 205M238 225l22-20" stroke="#222" stroke-width="6" stroke-linecap="round"/><path d="M135 228Q150 218 165 228" fill="none" stroke="#222" stroke-width="6"/><circle ${f} cx="98" cy="235" r="40" stroke="#222" stroke-width="6" style="fill:${c};fill-opacity:.85"/><circle ${f} cx="202" cy="235" r="40" stroke="#222" stroke-width="6" style="fill:${c};fill-opacity:.85"/>`;
+  else if(cat==="Joias")b+=`<path ${f} fill-rule="evenodd" d="M150 150a60 60 0 1 0 .1 0zM150 164a46 46 0 1 1-.1 0z"/><circle cx="150" cy="150" r="14" fill="#F4EFE9" stroke="#bbb"/>`;
+  else if(cat==="Cangas")b+=`<path ${f} d="M70 120Q110 100 150 120T230 120V340Q190 360 150 340T70 340z"/><path d="M70 170h160M70 220h160M70 270h160" stroke="#fff" opacity=".45" stroke-width="6"/>`;
+  else b+=`<path ${f} d="M85 310Q150 215 220 310Q150 345 85 310z"/><path d="M118 285Q150 235 182 285" fill="none" stroke="#fff" opacity=".7" stroke-width="9" stroke-linecap="round"/>`;
+  return `<svg class="art" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${b}</svg>`;
+}
+const $=id=>document.getElementById(id);
+const brl=v=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const heart='<svg class="i" viewBox="0 0 24 24"><path d="M12 20.500l-1.200-1.100C6 15.200 3 12.500 3 9a4.500 4.500 0 0 1 8.200-2.600h1.600A4.500 4.500 0 0 1 21 9c0 3.500-3 6.200-7.800 10.400z"/></svg>';
+function load(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}}
+function save(){try{localStorage.setItem("mare_cart",JSON.stringify(cart));localStorage.setItem("mare_favs",JSON.stringify([...favs]))}catch(e){}}
+let cart=load("mare_cart",[]),favs=new Set(load("mare_favs",[])),view="cart",busca="",fc=null,fk=null,ord="rel";
+
+const card=p=>`<article class="card" data-id="${p.id}"><div class="ph" style="background:${BG[p.bg]}">${p.tag?`<span class="tag">${p.tag}</span>`:""}${IMG[p.id]?`<img class="art" src="${IMG[p.id]}" alt="${p.nome}" style="object-fit:cover" onerror="imgErr(this)">`:art(p.cat,COL[p.cores[0]])}</div>
+<div class="r1"><div class="sws">${p.cores.map((k,i)=>`<button class="sw" data-c="${COL[k]}" aria-pressed="${i==0}" aria-label="Cor ${k}" style="background:${COL[k]}"></button>`).join("")}</div><button class="fav" data-fav="${p.id}" aria-pressed="${favs.has(p.id)}" aria-label="Favoritar">${heart}</button></div>
+<p class="nm">${p.nome}</p><p class="cd">Cód. ${p.cod}</p><p class="pr">${brl(p.preco)}</p><p class="pc">6x de ${brl(p.preco/6)}</p>
+<div class="szs">${Object.entries(p.tam).map(([s,ok])=>`<button class="sz${s==="Único"?" w":""}" data-s="${s}" aria-pressed="false" ${ok?"":"disabled"}>${s}</button>`).join("")}</div>
+<button class="add" data-add="${p.id}">Adicionar à sacola</button></article>`;
+function imgErr(img){const p=P.find(x=>x.id===+img.closest(".card").dataset.id);img.outerHTML=art(p.cat,COL[p.cores[0]])}
+
+function renderFilters(){
+  const cores=[...new Set(P.flatMap(p=>p.cores))];
+  $("fcores").innerHTML=cores.map(k=>`<button class="fc" data-fc="${k}" aria-pressed="${fc===k}" aria-label="Filtrar cor ${k}" title="${k}" style="background:${COL[k]}"></button>`).join("");
+  $("fcats").innerHTML=CATS.map(c=>`<button class="ft" data-fk="${c}" aria-pressed="${fk===c}">${c}</button>`).join("");
+  $("clr").hidden=!(fc||fk||busca);
+}
+function renderGrid(){
+  let l=P.filter(p=>p.nome.toLowerCase().includes(busca)&&(!fc||p.cores.includes(fc))&&(!fk||p.cat===fk));
+  if(ord==="menor")l.sort((a,b)=>a.preco-b.preco);
+  if(ord==="maior")l.sort((a,b)=>b.preco-a.preco);
+  if(ord==="az")l.sort((a,b)=>a.nome.localeCompare(b.nome,"pt-BR"));
+  $("pg").innerHTML=l.length?l.map(card).join(""):'<p class="empty">Nenhum acessório encontrado com esses filtros.</p>';
+  $("cnt").textContent=l.length+(l.length===1?" produto":" produtos");
+  renderFilters();
+}
+function renderDrawer(){
+  const list=view==="cart"?cart:P.filter(p=>favs.has(p.id));
+  $("dtitle").textContent=view==="cart"?"Sua sacola":"Seus favoritos";
+  $("totalrow").style.display=$("checkout").style.display=view==="cart"?"":"none";
+  $("items").innerHTML=list.length?list.map((p,i)=>`<div class="item"><div class="item-info"><img class="item-img" src="${p.img||IMG[p.id]||""}" alt="${p.nome}" onerror="this.style.display='none'"><div class="item-details"><span class="item-name">${p.nome.toUpperCase()}</span><small>${view==="cart"?"Tam. "+p.t+" · ":""}${brl(p.preco)}</small></div></div><button data-rm="${i}">Remover</button></div>`).join(""):`<p class="empty">${view==="cart"?"Sua sacola está vazia. Escolha uma peça na coleção.":"Você ainda não favoritou nenhuma peça."}</p>`;
+  $("count").textContent=cart.length;$("fcount").textContent=favs.size;
+  $("total").textContent=brl(cart.reduce((s,p)=>s+p.preco,0));
+}
+function toggle(o){$("drawer").classList.toggle("open",o);$("drawer").setAttribute("aria-hidden",!o)}
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("show"),1800)}
+
+document.addEventListener("click",e=>{
+  const sw=e.target.closest(".sw"),sz=e.target.closest(".sz"),fv=e.target.closest(".fav"),ad=e.target.closest("[data-add]"),rm=e.target.closest("[data-rm]"),
+        bc=e.target.closest("[data-fc]"),bk=e.target.closest("[data-fk]");
+  if(sw){const c=sw.closest(".card");c.querySelectorAll(".sw").forEach(x=>x.setAttribute("aria-pressed",x===sw));c.querySelectorAll(".dress").forEach(d=>d.style.fill=sw.dataset.c)}
+  if(sz){const c=sz.closest(".card");c.querySelectorAll(".sz").forEach(x=>x.setAttribute("aria-pressed",x===sz))}
+  if(fv){const id=+fv.dataset.fav;favs.has(id)?favs.delete(id):favs.add(id);fv.setAttribute("aria-pressed",favs.has(id));save();renderDrawer()}
+  if(ad){const c=ad.closest(".card"),s=c.querySelector('.sz[aria-pressed="true"]');
+    if(!s){toast("Escolha uma opção");return}
+    const p=P.find(x=>x.id==ad.dataset.add);cart.push({...p,t:s.dataset.s,img:IMG[p.id]});save();renderDrawer();toast("Adicionado à sacola")}
+  if(rm){const i=+rm.dataset.rm;if(view==="cart")cart.splice(i,1);else favs.delete(P.filter(p=>favs.has(p.id))[i].id);save();renderGrid();renderDrawer()}
+  if(bc){fc=fc===bc.dataset.fc?null:bc.dataset.fc;renderGrid()}
+  if(bk){fk=fk===bk.dataset.fk?null:bk.dataset.fk;renderGrid()}
+});
+$("ord").onchange=e=>{ord=e.target.value;renderGrid()};
+$("clr").onclick=()=>{fc=fk=null;busca="";$("q").value="";renderGrid()};
+$("open-cart").onclick=()=>{view="cart";renderDrawer();toggle(true)};
+$("open-fav").onclick=()=>{view="fav";renderDrawer();toggle(true)};
+$("close-cart").onclick=()=>toggle(false);
+$("checkout").onclick=()=>{if(!cart.length)return;cart=[];save();renderDrawer();toggle(false);toast("Pedido recebido! Obrigada por comprar na Maré Alta.")};
+$("q").oninput=e=>{busca=e.target.value.trim().toLowerCase();renderGrid()};
+$("sf").onsubmit=e=>{e.preventDefault();renderGrid()};
+$("up").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+renderGrid();renderDrawer();
+
+  </script>
+ <script src="fotos.js"></script>
+<script src="abrirProduto.js"></script>
+ </body>
+</html>
